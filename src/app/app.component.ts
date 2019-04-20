@@ -103,6 +103,9 @@ export class AppComponent {
       'AUD', 'CAD', 'CHF', 'EUR', 'GBP', 'JPY', 'NZD', 'USD', 'XAU'
     ];
 
+    this.tempValue = [];
+
+
     this.pairRemove= [];
   }
 
