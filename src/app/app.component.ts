@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'market-watch';
   tempValue: any = [];
+  pairRemove: any = [];
 
   chartList = [
     'AUDUSD',
@@ -46,7 +47,10 @@ export class AppComponent {
   ];
 
   onChange(value) {
-    // console.log(this.chartList, 'list');
+    console.log(value);
+    this.pairRemove.push(value);
+    console.log(this.pairRemove);
+
     for (var i in this.chartList) {
       //check string dalam selectchart exist dalam chartlist
       if (this.chartList[i].indexOf(value) >= 0) {

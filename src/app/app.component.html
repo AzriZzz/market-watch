@@ -6,16 +6,18 @@
           Market Watch
         </h1>
         <p>Warning! This application only help trader to remove pair
-          chart that is affected by news from the <a href="https://www.forexfactory.com/" target="_blank">forex factory</a> .</p>
+          chart that is affected by news from the <a href="https://www.forexfactory.com/" target="_blank">forex
+            factory</a> .</p>
       </div>
     </div>
 
     <div class="row mt-3">
       <div class="col-md-6 offset-md-3">
         <div class="dropdown float-right">
-          <select class="btn btn-primary" name="filter-select" placeholder="Show All" id="filter-select" class="select btn-block filters-select" (change)="onChange($event.target.value)">
-              <option value="selectAll">Select to remove</option>
-              <option *ngFor="let select of selectChart" value="{{select}}">{{ select }}</option>
+          <select class="btn btn-primary" name="filter-select" placeholder="Show All" id="filter-select"
+            class="select btn-block filters-select" (change)="onChange($event.target.value)">
+            <option value="selectAll">Select to remove</option>
+            <option *ngFor="let select of selectChart" value="{{select}}">{{ select }}</option>
           </select>
         </div>
         <div class="row">
@@ -25,6 +27,13 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-6 offset-md-3">
+        <h6>Pair Remove: </h6>
+        <div *ngFor="let pair of pairRemove">{{ pair }}</div>
+
       </div>
     </div>
   </div>
