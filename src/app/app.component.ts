@@ -51,14 +51,14 @@ export class AppComponent {
       //check string dalam selectchart exist dalam chartlist
       if (this.chartList[i].indexOf(value) >= 0) {
         //tempvalue pegang value yang ada persamaan string dalam selectchart == chartlist
-        this.tempValue.push(this.chartList[i]);
+        this.tempValue.push(this.chartList[i], 'line 54');
       }
     }
     this.chartList = this.chartList.filter(item =>
       !this.tempValue.includes(item)
     )
-    console.log(this.tempValue);
-    console.log(this.chartList);
+    console.log(this.tempValue, 'line 60');
+    console.log(this.chartList, 'line 61');
   }
 
 }
