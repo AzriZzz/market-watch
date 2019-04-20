@@ -47,9 +47,11 @@ export class AppComponent {
   ];
 
   onChange(value) {
-    console.log(value);
+
     this.pairRemove.push(value);
-    console.log(this.pairRemove);
+    
+    // console.log(value);
+    // console.log(this.pairRemove);
 
     for (var i in this.chartList) {
       //check string dalam selectchart exist dalam chartlist
@@ -61,8 +63,47 @@ export class AppComponent {
     this.chartList = this.chartList.filter(item =>
       !this.tempValue.includes(item)
     )
-    console.log(this.tempValue, 'line 60');
-    console.log(this.chartList, 'line 61');
+    // console.log(this.tempValue, 'line 60');
+    // console.log(this.chartList, 'line 61');
+  }
+
+  resetpair(){
+    this.chartList = [
+      'AUDUSD',
+      'EURUSD',
+      'GBPUSD',
+      'USDCAD',
+      'USDJPY',
+      'USDCHF',
+      'AUDCAD',
+      'AUDCHF',
+      'AUDJPY',
+      'AUDNZD',
+      'CADCHF',
+      'CHFJPY',
+      'EURAUD',
+      'EURCAD',
+      'EURGBP',
+      'EURJPY',
+      'EURNZD',
+      'EURCHF',
+      'GBPAUD',
+      'GBPCAD',
+      'GBPCHF',
+      'GBPJPY',
+      'GBPNZD',
+      'NZDCAD',
+      'NZDCHF',
+      'NZDJPY',
+      'NZDUSD',
+      'XAUUSD'
+    ];
+  
+    this.selectChart = [
+      'AUD', 'CAD', 'CHF', 'EUR', 'GBP', 'JPY', 'NZD', 'USD', 'XAU'
+    ];
+
+    this.pairRemove= [];
   }
 
 }
