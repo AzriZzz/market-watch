@@ -19,29 +19,23 @@
             <option value="selectAll">Select to remove</option>
             <option *ngFor="let select of selectChart" value="{{select}}">{{ select }}</option>
           </select>
+          <h6 class="text-center mt-3">History (Removed): </h6>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-4 col-6 col-sm-4 pr-2" *ngFor="let pair of pairRemove">{{ pair }}</div>
+          </div>
+        </div>
+          <button class="center btn btn-warning float-right mt-5" (click)="resetpair()">
+              Reset
+            </button>
         </div>
         <div class="row">
-          <div *ngFor="let chart of chartList" class="col-md-4">
+          <div *ngFor="let chart of chartList" class="col-md-4 col-6 col-sm-4">
             <div class="pb-3">
               {{ chart }} <br>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-md-6 offset-md-3">
-        <h3 class="text-center">History (Removed): </h3>
-        <div class="row">
-          <div class="col-md-4" *ngFor="let pair of pairRemove">{{ pair }}</div>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-5 pt-5">
-      <div class="col-md-6 offset-md-3 text-center">
-        <button class="center btn btn-warning" (click)="resetpair()">
-          Reset
-        </button>
       </div>
     </div>
   </div>
