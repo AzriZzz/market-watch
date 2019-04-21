@@ -48,7 +48,12 @@ export class AppComponent {
 
   onChange(value) {
 
-    this.pairRemove.push(value);
+    if (value == "selectAll"){
+      console.log('DO nothing');
+    } else {
+      this.pairRemove.push(value);
+    }
+
     
     // console.log(value);
     // console.log(this.pairRemove);
